@@ -6,3 +6,9 @@ name = MariaDB
 baseurl = http://yum.mariadb.org/10.1/rhel6-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
+
+
+create database zabbix; 
+grant all privileges on zabbix.* to zabbix@'localhost' identified by 'Welcome!01'; 
+grant all privileges on zabbix.* to zabbix@'%' identified by 'Welcome!01'; 
+flush privileges;
